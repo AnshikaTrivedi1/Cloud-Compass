@@ -1,0 +1,559 @@
+{
+  "aws": {
+    "name": "Amazon Web Services",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+    "services": [
+      {
+        "name": "Amazon EC2",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/b/b9/AWS_Simple_Icons_Compute_Amazon_EC2_Instances.svg",
+        "category": "Compute",
+        "shortDescription": "Scalable virtual servers in the cloud",
+        "description": "Amazon Elastic Compute Cloud (EC2) provides secure, resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers by providing complete control over computing resources.",
+        "usageSteps": [
+          "Sign in to AWS Management Console",
+          "Navigate to EC2 Dashboard",
+          "Click 'Launch Instance'",
+          "Choose an Amazon Machine Image (AMI)",
+          "Select an instance type based on your needs",
+          "Configure instance details and storage",
+          "Add tags for better organization",
+          "Configure security group rules",
+          "Review and launch with key pair"
+        ],
+        "realWorldExamples": [
+          {
+            "title": "Web Application Hosting",
+            "description": "Host scalable web applications with auto-scaling capabilities"
+          },
+          {
+            "title": "Development Environments",
+            "description": "Create isolated development and testing environments"
+          },
+          {
+            "title": "Big Data Processing",
+            "description": "Process large datasets with high-performance computing instances"
+          }
+        ],
+        "architecture": {
+          "description": "EC2 instances run in Virtual Private Clouds (VPCs) with security groups acting as virtual firewalls",
+          "components": ["VPC", "Security Groups", "Load Balancer", "Auto Scaling Group"]
+        }
+      },
+      {
+        "name": "Amazon S3",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Amazon-S3-Logo.svg",
+        "category": "Storage",
+        "shortDescription": "Object storage service with industry-leading scalability",
+        "description": "Amazon Simple Storage Service (S3) is an object storage service offering industry-leading scalability, data availability, security, and performance. Customers can store and protect any amount of data for virtually any use case.",
+        "usageSteps": [
+          "Access S3 console from AWS Management Console",
+          "Create a new S3 bucket with unique name",
+          "Configure bucket settings and permissions",
+          "Upload files using drag-and-drop or API",
+          "Set object permissions and metadata",
+          "Configure lifecycle policies for cost optimization",
+          "Enable versioning for data protection",
+          "Set up CloudFront for content delivery"
+        ],
+        "realWorldExamples": [
+          {
+            "title": "Static Website Hosting",
+            "description": "Host static websites with global content delivery"
+          },
+          {
+            "title": "Data Backup and Archive",
+            "description": "Store backup data with multiple storage classes for cost optimization"
+          },
+          {
+            "title": "Content Distribution",
+            "description": "Distribute media files and software downloads globally"
+          }
+        ],
+        "architecture": {
+          "description": "S3 stores objects in buckets across multiple Availability Zones for durability",
+          "components": ["Buckets", "Objects", "CloudFront", "IAM Policies"]
+        }
+      },
+      {
+        "name": "Amazon RDS",
+        "icon": "https://cdn.iconscout.com/icon/free/png-256/amazon-rds-1869025-1583149.png",
+        "category": "Database",
+        "shortDescription": "Managed relational database service",
+        "description": "Amazon Relational Database Service (RDS) makes it easy to set up, operate, and scale a relational database in the cloud. It provides cost-efficient and resizable capacity while automating time-consuming administration tasks.",
+        "usageSteps": [
+          "Navigate to RDS in AWS Console",
+          "Click 'Create database'",
+          "Choose database engine (MySQL, PostgreSQL, etc.)",
+          "Select database template and edition",
+          "Configure database settings and credentials",
+          "Choose instance class and storage type",
+          "Configure connectivity and security",
+          "Set up backup and monitoring options",
+          "Review and create database"
+        ],
+        "realWorldExamples": [
+          {
+            "title": "E-commerce Applications",
+            "description": "Store product catalogs, user data, and transaction records"
+          },
+          {
+            "title": "Content Management",
+            "description": "Manage website content and user-generated data"
+          },
+          {
+            "title": "Analytics Platform",
+            "description": "Store and analyze business metrics and KPIs"
+          }
+        ],
+        "architecture": {
+          "description": "RDS instances run in VPCs with Multi-AZ deployment for high availability",
+          "components": ["Primary Instance", "Standby Instance", "Read Replicas", "Parameter Groups"]
+        }
+      },
+      {
+        "name": "AWS Lambda",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/5/5c/AWS_Lambda_architecture_logo.svg",
+        "category": "Serverless",
+        "shortDescription": "Run code without thinking about servers",
+        "description": "AWS Lambda lets you run code without provisioning or managing servers. You pay only for the compute time you consume - there is no charge when your code is not running.",
+        "usageSteps": [
+          "Open AWS Lambda console",
+          "Click 'Create function'",
+          "Choose authoring method (from scratch, blueprint, etc.)",
+          "Configure function name and runtime",
+          "Set up execution role and permissions",
+          "Write or upload your function code",
+          "Configure triggers and event sources",
+          "Set environment variables and timeout",
+          "Test and deploy your function"
+        ],
+        "realWorldExamples": [
+          {
+            "title": "API Backend",
+            "description": "Create serverless APIs with API Gateway integration"
+          },
+          {
+            "title": "Data Processing",
+            "description": "Process files uploaded to S3 automatically"
+          },
+          {
+            "title": "Scheduled Tasks",
+            "description": "Run periodic maintenance and cleanup tasks"
+          }
+        ],
+        "architecture": {
+          "description": "Lambda functions are triggered by events and scale automatically",
+          "components": ["Function Code", "Event Sources", "IAM Roles", "CloudWatch Logs"]
+        }
+      },
+      {
+        "name": "Amazon VPC",
+        "icon": "https://cdn.iconscout.com/icon/free/png-256/amazon-vpc-1869026-1583150.png",
+        "category": "Networking",
+        "shortDescription": "Virtual private cloud for isolated network environments",
+        "description": "Amazon Virtual Private Cloud (VPC) enables you to launch AWS resources in a logically isolated virtual network that you define. You have complete control over your virtual networking environment.",
+        "usageSteps": [
+          "Access VPC Dashboard in AWS Console",
+          "Click 'Create VPC'",
+          "Define CIDR block for your VPC",
+          "Create public and private subnets",
+          "Set up Internet Gateway for public access",
+          "Configure Route Tables",
+          "Create NAT Gateway for private subnet internet access",
+          "Configure Security Groups and NACLs",
+          "Launch resources in your VPC"
+        ],
+        "realWorldExamples": [
+          {
+            "title": "Multi-tier Applications",
+            "description": "Separate web, application, and database tiers with different subnets"
+          },
+          {
+            "title": "Hybrid Cloud",
+            "description": "Connect on-premises networks to AWS using VPN or Direct Connect"
+          },
+          {
+            "title": "Compliance Requirements",
+            "description": "Meet regulatory requirements with network isolation"
+          }
+        ],
+        "architecture": {
+          "description": "VPCs provide isolated networking with customizable IP ranges and routing",
+          "components": ["Subnets", "Internet Gateway", "NAT Gateway", "Route Tables", "Security Groups"]
+        }
+      }
+    ]
+  },
+  "gcp": {
+    "name": "Google Cloud Platform",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg",
+    "services": [
+      {
+        "name": "Compute Engine",
+        "icon": "https://cloud.google.com/_static/cloud/images/cloud-logo.svg",
+        "category": "Compute",
+        "shortDescription": "Virtual machines running on Google's infrastructure",
+        "description": "Google Compute Engine provides scalable, high-performance virtual machines running on Google's infrastructure. It offers both predefined and custom machine types to optimize for your specific workloads.",
+        "usageSteps": [
+          "Access Google Cloud Console",
+          "Navigate to Compute Engine",
+          "Click 'Create Instance'",
+          "Choose machine configuration and zone",
+          "Select operating system and boot disk",
+          "Configure firewall settings",
+          "Set up network and storage options",
+          "Review and create the instance",
+          "Connect via SSH or RDP"
+        ],
+        "realWorldExamples": [
+          {
+            "title": "High-Performance Computing",
+            "description": "Run scientific simulations and data analysis workloads"
+          },
+          {
+            "title": "Game Servers",
+            "description": "Host multiplayer game servers with low latency"
+          },
+          {
+            "title": "Batch Processing",
+            "description": "Process large datasets in parallel across multiple instances"
+          }
+        ],
+        "architecture": {
+          "description": "Compute Engine VMs run in zones within regions with automatic scaling capabilities",
+          "components": ["VM Instances", "Instance Groups", "Load Balancers", "Persistent Disks"]
+        }
+      },
+      {
+        "name": "Cloud Storage",
+        "icon": "https://cloud.google.com/_static/cloud/images/cloud-logo.svg",
+        "category": "Storage",
+        "shortDescription": "Unified object storage for any amount of data",
+        "description": "Google Cloud Storage is a unified object storage solution that allows you to store any amount of data and retrieve it as often as you'd like. It's designed for 99.999999999% durability.",
+        "usageSteps": [
+          "Open Google Cloud Console",
+          "Navigate to Cloud Storage",
+          "Create a new bucket with unique name",
+          "Choose storage class and location",
+          "Configure access control and permissions",
+          "Upload files via console, CLI, or API",
+          "Set up lifecycle management policies",
+          "Configure CDN integration if needed",
+          "Monitor usage and costs"
+        ],
+        "realWorldExamples": [
+          {
+            "title": "Data Lake",
+            "description": "Store structured and unstructured data for analytics"
+          },
+          {
+            "title": "Media Streaming",
+            "description": "Store and serve video and audio content globally"
+          },
+          {
+            "title": "Mobile App Backend",
+            "description": "Store user-generated content and app assets"
+          }
+        ],
+        "architecture": {
+          "description": "Cloud Storage provides global object storage with multiple storage classes",
+          "components": ["Buckets", "Objects", "IAM Policies", "Cloud CDN"]
+        }
+      },
+      {
+        "name": "BigQuery",
+        "icon": "https://cloud.google.com/_static/cloud/images/cloud-logo.svg",
+        "category": "Analytics",
+        "shortDescription": "Serverless data warehouse for analytics at scale",
+        "description": "BigQuery is Google's fully managed, serverless data warehouse that enables super-fast SQL queries using the processing power of Google's infrastructure.",
+        "usageSteps": [
+          "Access BigQuery in Google Cloud Console",
+          "Create a new dataset",
+          "Load data from various sources (CSV, JSON, etc.)",
+          "Create tables and define schemas",
+          "Write SQL queries to analyze data",
+          "Use the query editor to run analytics",
+          "Set up scheduled queries for automation",
+          "Create views and materialized views",
+          "Export results or connect to BI tools"
+        ],
+        "realWorldExamples": [
+          {
+            "title": "Business Intelligence",
+            "description": "Analyze sales data and generate business insights"
+          },
+          {
+            "title": "IoT Data Analysis",
+            "description": "Process and analyze sensor data from IoT devices"
+          },
+          {
+            "title": "Marketing Analytics",
+            "description": "Analyze customer behavior and campaign performance"
+          }
+        ],
+        "architecture": {
+          "description": "BigQuery separates storage and compute for efficient querying of large datasets",
+          "components": ["Datasets", "Tables", "Query Engine", "Data Transfer Service"]
+        }
+      },
+      {
+        "name": "Cloud Functions",
+        "icon": "https://cloud.google.com/_static/cloud/images/cloud-logo.svg",
+        "category": "Serverless",
+        "shortDescription": "Event-driven serverless compute platform",
+        "description": "Google Cloud Functions is a serverless execution environment for building and connecting cloud services. It automatically scales and charges only when your code runs.",
+        "usageSteps": [
+          "Open Google Cloud Console",
+          "Navigate to Cloud Functions",
+          "Click 'Create Function'",
+          "Configure function name and region",
+          "Set trigger type (HTTP, Cloud Storage, etc.)",
+          "Choose runtime and memory allocation",
+          "Write function code in the editor",
+          "Set environment variables",
+          "Deploy and test the function"
+        ],
+        "realWorldExamples": [
+          {
+            "title": "Image Processing",
+            "description": "Automatically resize images uploaded to Cloud Storage"
+          },
+          {
+            "title": "API Microservices",
+            "description": "Create lightweight REST APIs for mobile apps"
+          },
+          {
+            "title": "Data Transformation",
+            "description": "Process and transform data in real-time"
+          }
+        ],
+        "architecture": {
+          "description": "Cloud Functions execute in response to events and scale automatically",
+          "components": ["Function Code", "Triggers", "Runtime Environment", "Cloud Logging"]
+        }
+      },
+      {
+        "name": "Kubernetes Engine",
+        "icon": "https://cloud.google.com/_static/cloud/images/cloud-logo.svg",
+        "category": "Containers",
+        "shortDescription": "Managed Kubernetes service for containerized applications",
+        "description": "Google Kubernetes Engine (GKE) is a managed environment for deploying, managing, and scaling containerized applications using Google infrastructure.",
+        "usageSteps": [
+          "Access Google Cloud Console",
+          "Navigate to Kubernetes Engine",
+          "Create a new cluster",
+          "Configure node pools and machine types",
+          "Set up networking and security",
+          "Deploy applications using kubectl",
+          "Configure services and ingress",
+          "Set up monitoring and logging",
+          "Scale applications as needed"
+        ],
+        "realWorldExamples": [
+          {
+            "title": "Microservices Architecture",
+            "description": "Deploy and manage microservices-based applications"
+          },
+          {
+            "title": "CI/CD Pipelines",
+            "description": "Automate deployment pipelines for containerized apps"
+          },
+          {
+            "title": "Multi-cloud Applications",
+            "description": "Run portable applications across different cloud providers"
+          }
+        ],
+        "architecture": {
+          "description": "GKE manages Kubernetes clusters with automatic scaling and updates",
+          "components": ["Master Nodes", "Worker Nodes", "Pods", "Services", "Ingress Controllers"]
+        }
+      }
+    ]
+  },
+  "azure": {
+    "name": "Microsoft Azure",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg",
+    "services": [
+      {
+        "name": "Virtual Machines",
+        "icon": "https://azure.microsoft.com/svghandler/virtual-machines",
+        "category": "Compute",
+        "shortDescription": "Scalable cloud compute resources",
+        "description": "Azure Virtual Machines provide on-demand, scalable computing resources. Create Linux and Windows virtual machines in seconds and pay only for what you use.",
+        "usageSteps": [
+          "Sign in to Azure Portal",
+          "Click 'Create a resource'",
+          "Select 'Virtual Machine'",
+          "Configure basic settings and resource group",
+          "Choose VM size and operating system",
+          "Set up administrator account",
+          "Configure networking and security",
+          "Review settings and create VM",
+          "Connect via RDP or SSH"
+        ],
+        "realWorldExamples": [
+          {
+            "title": "Enterprise Applications",
+            "description": "Migrate legacy applications to the cloud"
+          },
+          {
+            "title": "Development and Testing",
+            "description": "Create development environments for software testing"
+          },
+          {
+            "title": "Disaster Recovery",
+            "description": "Set up backup systems for business continuity"
+          }
+        ],
+        "architecture": {
+          "description": "Azure VMs run in virtual networks with availability sets for high availability",
+          "components": ["VM Instances", "Virtual Networks", "Load Balancers", "Availability Sets"]
+        }
+      },
+      {
+        "name": "Blob Storage",
+        "icon": "https://azure.microsoft.com/svghandler/storage-blob",
+        "category": "Storage",
+        "shortDescription": "Massively scalable object storage",
+        "description": "Azure Blob Storage is Microsoft's object storage solution for the cloud. It's optimized for storing massive amounts of unstructured data, such as text or binary data.",
+        "usageSteps": [
+          "Access Azure Portal",
+          "Create a new storage account",
+          "Configure performance and replication settings",
+          "Create blob containers",
+          "Upload files using portal, CLI, or SDK",
+          "Set access policies and permissions",
+          "Configure lifecycle management",
+          "Set up CDN for global distribution",
+          "Monitor usage and performance"
+        ],
+        "realWorldExamples": [
+          {
+            "title": "Content Delivery",
+            "description": "Store and serve static website content globally"
+          },
+          {
+            "title": "Data Archival",
+            "description": "Long-term storage of backup and archival data"
+          },
+          {
+            "title": "Big Data Analytics",
+            "description": "Store large datasets for analytics and machine learning"
+          }
+        ],
+        "architecture": {
+          "description": "Blob Storage provides scalable object storage with multiple access tiers",
+          "components": ["Storage Accounts", "Containers", "Blobs", "Access Policies"]
+        }
+      },
+      {
+        "name": "SQL Database",
+        "icon": "https://azure.microsoft.com/svghandler/sql-database",
+        "category": "Database",
+        "shortDescription": "Managed SQL database as a service",
+        "description": "Azure SQL Database is a fully managed relational database with auto-scale, integral intelligence, and robust security. It's built for the cloud with all the benefits of a fully managed service.",
+        "usageSteps": [
+          "Navigate to Azure SQL in the portal",
+          "Create a new SQL database",
+          "Configure server and database settings",
+          "Choose service tier and compute size",
+          "Set up firewall rules and security",
+          "Create database schema and tables",
+          "Connect applications using connection strings",
+          "Configure backup and disaster recovery",
+          "Monitor performance and optimize queries"
+        ],
+        "realWorldExamples": [
+          {
+            "title": "Web Applications",
+            "description": "Store application data with automatic scaling"
+          },
+          {
+            "title": "Business Analytics",
+            "description": "Analyze business data with built-in intelligence"
+          },
+          {
+            "title": "SaaS Applications",
+            "description": "Multi-tenant database solutions for SaaS platforms"
+          }
+        ],
+        "architecture": {
+          "description": "Azure SQL Database provides managed database services with high availability",
+          "components": ["Database Server", "Elastic Pools", "Failover Groups", "Backup Storage"]
+        }
+      },
+      {
+        "name": "Azure Functions",
+        "icon": "https://azure.microsoft.com/svghandler/functions",
+        "category": "Serverless",
+        "shortDescription": "Event-driven serverless compute",
+        "description": "Azure Functions is a serverless compute service that enables you to run event-triggered code without having to explicitly provision or manage infrastructure.",
+        "usageSteps": [
+          "Open Azure Portal",
+          "Create a new Function App",
+          "Choose runtime stack and hosting plan",
+          "Create individual functions",
+          "Select trigger type (HTTP, timer, etc.)",
+          "Write function code in the portal",
+          "Configure bindings and integrations",
+          "Test functions with sample data",
+          "Monitor execution and performance"
+        ],
+        "realWorldExamples": [
+          {
+            "title": "API Backend",
+            "description": "Create REST APIs for mobile and web applications"
+          },
+          {
+            "title": "Data Processing",
+            "description": "Process files and messages in real-time"
+          },
+          {
+            "title": "IoT Data Handling",
+            "description": "Process sensor data from IoT devices"
+          }
+        ],
+        "architecture": {
+          "description": "Azure Functions execute in response to triggers and scale automatically",
+          "components": ["Function App", "Triggers", "Bindings", "Application Insights"]
+        }
+      },
+      {
+        "name": "Active Directory",
+        "icon": "https://azure.microsoft.com/svghandler/active-directory",
+        "category": "Identity",
+        "shortDescription": "Identity and access management service",
+        "description": "Azure Active Directory (Azure AD) is Microsoft's cloud-based identity and access management service. It helps employees sign in and access resources securely.",
+        "usageSteps": [
+          "Access Azure Active Directory in portal",
+          "Set up your Azure AD tenant",
+          "Add users and groups",
+          "Configure single sign-on (SSO)",
+          "Set up multi-factor authentication",
+          "Configure application registrations",
+          "Set up conditional access policies",
+          "Configure directory synchronization",
+          "Monitor sign-in activities"
+        ],
+        "realWorldExamples": [
+          {
+            "title": "Enterprise SSO",
+            "description": "Provide single sign-on access to all company applications"
+          },
+          {
+            "title": "B2B Collaboration",
+            "description": "Securely collaborate with external partners"
+          },
+          {
+            "title": "Mobile App Authentication",
+            "description": "Authenticate users in mobile applications"
+          }
+        ],
+        "architecture": {
+          "description": "Azure AD provides centralized identity management with federation capabilities",
+          "components": ["Tenants", "Users", "Groups", "Applications", "Conditional Access"]
+        }
+      }
+    ]
+  }
+}
