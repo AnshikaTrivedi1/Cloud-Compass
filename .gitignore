@@ -107,8 +107,8 @@ Thumbs.db
 .aws/
 
 # Application specific
-uploads/
-public/uploads/
+# uploads/
+# public/uploads/
 
 # Keep important project files
 !.github/
