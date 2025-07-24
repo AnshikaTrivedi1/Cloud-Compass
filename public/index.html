@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Compass</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="main-title">
+                    <i class="fas fa-cloud"></i>
+                    Cloud Compass
+                </h1>
+                <p class="tagline">Getting started with cloudy world</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cloud Providers Section -->
+    <section class="providers-section">
+        <div class="container">
+            <h2 class="section-title">Choose Your Cloud Platform</h2>
+            <div class="providers-grid">
+                <!-- AWS Card -->
+                <div class="provider-card aws-card" data-provider="aws">
+                    <div class="card-header">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS Logo" class="provider-logo">
+                        <h3>Amazon Web Services</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>The world's most comprehensive and broadly adopted cloud platform</p>
+                        <div class="stats">
+                            <span class="stat-item">200+ Services</span>
+                            <span class="stat-item">Global Leader</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="explore-btn aws-btn">
+                            <i class="fas fa-arrow-right"></i>
+                            Explore AWS
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Google Cloud Card -->
+                <div class="provider-card gcp-card" data-provider="gcp">
+                    <div class="card-header">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg" alt="Google Cloud Logo" class="provider-logo">
+                        <h3>Google Cloud Platform</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Build and scale with Google's infrastructure and data analytics</p>
+                        <div class="stats">
+                            <span class="stat-item">100+ Services</span>
+                            <span class="stat-item">AI/ML Focus</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="explore-btn gcp-btn">
+                            <i class="fas fa-arrow-right"></i>
+                            Explore GCP
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Azure Card -->
+                <div class="provider-card azure-card" data-provider="azure">
+                    <div class="card-header">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg" alt="Azure Logo" class="provider-logo">
+                        <h3>Microsoft Azure</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Comprehensive cloud services for building, deploying, and managing applications</p>
+                        <div class="stats">
+                            <span class="stat-item">150+ Services</span>
+                            <span class="stat-item">Enterprise Ready</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="explore-btn azure-btn">
+                            <i class="fas fa-arrow-right"></i>
+                            Explore Azure
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Detail Section -->
+    <section class="services-section" id="services-section" style="display: none;">
+        <div class="container">
+            <div class="services-header">
+                <button class="back-btn" id="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Providers
+                </button>
+                <h2 class="services-title" id="services-title">Services</h2>
+            </div>
+            <div class="services-grid" id="services-grid">
+                <!-- Services will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Detail Modal -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-title"></h3>
+                <button class="close-btn" id="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Service details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loading-spinner">
+        <div class="spinner"></div>
+        <p>Loading services...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
